@@ -3,6 +3,57 @@ body {
 }
 
 .container {
+  border: 2px solid blue;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; 
+  grid-template-columns: 1fr; 
+  grid-template-rows: 15vh 1fr 10vh;
+  grid-template-areas: 
+  "hd"
+  "main"
+  "ft";
+}
+
+.box {
+  border: 2px solid red;
+}
+
+.nav-items {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.nav-item {
+  list-style: none;
+}
+
+.header {
+  grid-area: hd;
+}
+
+.header-title {
+  text-align: center;
+}
+
+.blog-area {
+  grid-area: main;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-title {
+  text-align: center;
+}
+
+.blog-title {
+  text-align: center;
+}
+
+.blog-content {
+  padding: 0 20px 0 20px;
+}
+
+.footer {
+  grid-area: ft;
 }
