@@ -1,10 +1,28 @@
+/*******************
+ CSS Browser Reset
+ *******************/
+*,
+*::before, 
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
 body {
   box-sizing: border-box;
 }
 
+/**********************
+Core Styles
+***********************/
+
 .container {
   border: 2px solid blue;
   display: grid;
+  width: 100%;
   grid-template-columns: 1fr; 
   grid-template-rows: 15vh 1fr 10vh;
   grid-template-areas: 
@@ -36,10 +54,24 @@ body {
 
 .blog-area {
   grid-area: main;
+  grid-gap: 15vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  width: 80vw;
+  height: 33vh;
+  border-radius: 10px;
+}
+
+.card-photo {
+  object-fit: cover;
+  width: 100%;
+  height: 33vh;
 }
 
 .main-title {
@@ -56,4 +88,53 @@ body {
 
 .footer {
   grid-area: ft;
+}
+
+/***************
+BREAKPOINTS
+****************/
+
+@media (min-width: 1024px) {
+  .container {
+    min-height: 2000px;
+    grid-template-columns: 100px repeat(7,1fr);
+    grid-template-rows: 100% 1fr;
+    grid-template-areas:
+    "hd hd main main main main main main"
+    "ft ft ft ft ft ft ft ft"
+  }
+
+  .header {
+    background-color: #1e90ff;
+    color: #fff;
+  }
+
+  .nav-items {
+    display: flex;
+    height: 90vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .nav-item {
+    margin-top: 10px;
+  }
+
+  .blog-area {
+    /* align-items: flex-start; */
+    justify-content: space-evenly;
+    /* height: 100vh; */
+  }
+
+  .card {
+    width: 60%;
+    height: 30%;
+    text-align: center;
+  }
+
+  .footer {
+    background-color: #1e90ff;
+  }
+  
 }
