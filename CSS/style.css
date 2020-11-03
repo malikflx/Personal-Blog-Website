@@ -21,19 +21,18 @@ Core Styles
 
 .container {
   border: 2px solid blue;
+  height: 2000px;
   display: grid;
   width: 100%;
+  overflow: auto;
   grid-template-columns: 1fr; 
-  grid-template-rows: 15vh 1fr 10vh;
+  grid-template-rows: 10vh 1fr 15vh;
   grid-template-areas: 
   "hd"
   "main"
   "ft";
 }
 
-.box {
-  border: 2px solid red;
-}
 
 .nav-items {
   display: flex;
@@ -46,6 +45,8 @@ Core Styles
 
 .header {
   grid-area: hd;
+  background: #1e90ff;
+  color: #fff;
 }
 
 .header-title {
@@ -53,8 +54,9 @@ Core Styles
 }
 
 .blog-area {
+  margin-top: -40%;
   grid-area: main;
-  grid-gap: 15vh;
+  grid-gap: 10vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -71,7 +73,7 @@ Core Styles
 .card-photo {
   object-fit: cover;
   width: 100%;
-  height: 33vh;
+  height: 30vh;
 }
 
 .main-title {
@@ -84,10 +86,23 @@ Core Styles
 
 .blog-content {
   padding: 0 20px 0 20px;
+  clear: both;
 }
 
+.card-content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   grid-area: ft;
+  text-align: center;
+  color: #fff;
+  background: #1e90ff;
+  clear: both;
 }
 
 /***************

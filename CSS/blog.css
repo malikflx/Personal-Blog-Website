@@ -1,0 +1,165 @@
+/*******************
+ CSS Browser Reset
+ *******************/
+ *,
+ *::before, 
+ *::after {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   list-style: none;
+   text-decoration: none;
+ }
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+ 
+ body {
+   box-sizing: border-box;
+ }
+ 
+ /**********************
+ Core Styles
+ ***********************/
+ 
+ .container {
+   display: grid;
+   width: 100%;
+   grid-template-columns: 1fr; 
+   grid-template-rows: 15vh 1fr 10vh;
+   grid-template-areas: 
+   "hd"
+   "main"
+   "ft";
+ }
+ 
+ .nav-items {
+   display: flex;
+   justify-content: space-evenly;
+ }
+ 
+ .nav-item {
+   list-style: none;
+ }
+ 
+ .header {
+   grid-area: hd;
+   background: #1e90ff;
+   color: #fff;
+ }
+ 
+ .header-title {
+   text-align: center;
+ }
+ 
+ .blog-area {
+   grid-area: main;
+   grid-gap: 15vh;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+ }
+ 
+ .card {
+   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+   width: 50vw;
+   height: 33vh;
+   border-radius: 10px;
+ }
+
+ .blog-post {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   margin: 60px;
+ }
+ 
+ .intro-photo {
+   width: 60%;
+   height: 60%;
+ }
+ 
+ .main-title {
+   text-align: center;
+ }
+ 
+ .blog-title {
+   text-align: center;
+ }
+ 
+ .blog-content {
+   padding: 0 20px 0 20px;
+   line-height: 2;
+ }
+ 
+ .footer {
+   grid-area: ft;
+   display: flex;
+   text-align: center;
+   justify-content: center;
+   align-items: center;
+   color: #fff;
+   background: #1e90ff;
+ }
+ 
+ /***************
+ BREAKPOINTS
+ ****************/
+ 
+ @media (min-width: 1024px) {
+   .container {
+     height: 100vh;
+     grid-template-columns: 100px repeat(7,1fr);
+     grid-template-rows: 1fr  1fr 1fr;
+     grid-template-areas:
+     "hd hd hd hd hd hd hd hd" 
+     "main main main main main main main main"
+     "ft ft ft ft ft ft ft ft"
+   }
+ 
+   .header {
+     background-color: #1e90ff;
+     color: #fff;
+   }
+ 
+   .nav-items {
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+     justify-content: space-evenly;
+     margin: 50px;
+   }
+ 
+   .nav-item {
+     margin-top: 10px;
+   }
+
+   .blog-title {
+     margin-top: 20px;
+   }
+ 
+   .blog-area {
+     /* align-items: flex-start; */
+     justify-content: space-evenly;
+     /* height: 100vh; */
+   }
+ 
+   .card {
+     width: 60%;
+     height: 30%;
+     text-align: center;
+   }
+ 
+   .footer {
+     background-color: #1e90ff;
+   }
+   
+ }
+ 
