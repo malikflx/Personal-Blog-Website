@@ -130,6 +130,17 @@ a:visited {
  .credit {
    margin-left: 2em;
  }
+
+ .social-links {
+   display: flex;
+ }
+
+ .social-link {
+   width: 3em;
+   margin: 3em;
+   cursor: pointer;
+ }
+
  .footer {
    grid-area: ft;
    display: flex;
