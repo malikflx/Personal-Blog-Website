@@ -55,6 +55,7 @@ a:visited {
  
  .header-title {
    text-align: center;
+   margin-top: 2em;
  }
  
  .blog-area {
@@ -71,6 +72,17 @@ a:visited {
    width: 50vw;
    height: 33vh;
    border-radius: 10px;
+ }
+
+ figure {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+ }
+
+ figcaption {
+   margin: 1em;
  }
 
  .blog-post {

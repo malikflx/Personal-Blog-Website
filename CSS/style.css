@@ -46,6 +46,7 @@ Core Styles
   grid-area: hd;
   background: #1e90ff;
   color: #fff;
+  padding: 20px;
 }
 
 .header-title {
@@ -66,6 +67,21 @@ Core Styles
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   width: 80vw;
   border-radius: 10px;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  width: 6em;
+  height: 3em;
+  background: #1e90ff;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 .card-photo {
