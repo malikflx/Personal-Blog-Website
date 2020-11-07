@@ -66,6 +66,17 @@ a:visited {
    justify-content: center;
    align-items: center;
  }
+
+ .author-info {
+   display: flex;
+   flex-direction: column;
+   margin: 3em;
+   padding-left: 3em;
+ }
+
+ .author-photo {
+   width: 15%;
+ }
  
  .card {
    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
